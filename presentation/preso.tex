@@ -1,0 +1,83 @@
+%% Простая презентация с примером включения программного кода и
+%% пошаговых спецэффектов
+\documentclass{beamer}
+\usetheme{SPbAU}
+%\useoutertheme{infolines}
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\usepackage{xecyr}
+\usepackage{hyperref}
+\setmainfont[Mapping=tex-text]{DejaVu Serif}
+\setsansfont[Mapping=tex-text]{DejaVu Sans}
+\setmonofont[Mapping=tex-text]{DejaVu Sans Mono}
+\usepackage{polyglossia}
+\setdefaultlanguage{russian}
+\usepackage{graphicx}
+\usepackage{listings}
+\lstdefinestyle{mycode}{
+  belowcaptionskip=1\baselineskip,
+  breaklines=true,
+  xleftmargin=\parindent,
+  showstringspaces=false,
+  basicstyle=\footnotesize\ttfamily,
+  keywordstyle=\bfseries,
+  commentstyle=\itshape\color{gray!40!black},
+  stringstyle=\color{red},
+  numbers=left,
+  numbersep=5pt,
+  numberstyle=\tiny\color{gray},
+}
+\lstset{escapechar=@,style=mycode}
+
+\begin{document}
+\title[Короткое название]{Тут очень длинное что-то написано чтобы умереть еще на главном слайде}
+\subtitle{предварительные результаты}
+\author[Чайников Г.П.]{Чайников Григорий Петрович\\{\footnotesize\textcolor{gray}{научный руководитель: д.ф.-м.н. М.Ф. Редькин}}}
+\institute{СПб АУ НОЦНТ РАН}
+\frame{\titlepage}
+
+\begin{frame}\frametitle{Введение}
+\begin{itemize}
+    \item Ехал грека через реку
+    \item Видит грека в реке рак
+    \item Сунул грека руку в реку
+    \item<2-> {\Large \textcolor{blue}{Рак за руку греку цап!}}
+\end{itemize}
+\end{frame}
+
+\begin{frame}\frametitle{Цель и задачи}
+\begin{itemize}
+    \item Придумать диплом
+    \item Написать диплом
+    \item Убедить всех, что я молодец
+    \item ...
+\end{itemize}
+\end{frame}
+
+
+\lstset{language=java}
+\begin{frame}[fragile]\frametitle{Алгоритм}
+\begin{lstlisting}
+while (isWater()) {
+  row(boat);
+  if (crayfish) {
+    put(hand, river);
+  }
+}
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}\frametitle{Результаты}
+\Large
+\begin{itemize}
+    \item Достигли
+    \begin{itemize}
+        \item того
+        \item сего
+    \end{itemize}
+    \item Получили
+    \item Обнаружили
+\end{itemize}
+\end{frame}
+\end{document}
