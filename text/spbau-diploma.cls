@@ -82,6 +82,7 @@
 
 %% Параметры заполнения титульного листа
 \usepackage{xkeyval}
+\usepackage{minted}
 
 %% Русскоязычный вариант
 \define@key[ru]{mytitle}{university}{\def\my@title@university@ru{#1}}
