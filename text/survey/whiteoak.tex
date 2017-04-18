@@ -3,12 +3,27 @@ Whiteoak - это расширение языка Java которое добав
 
 Из такой реализации следует что невозможно создание самостоятельных структурных типов и определение конструкторов, определение статических методов.
 
-\begin{pyglist}[language=C]
-struct Source { int read(); }
+\begin{pyglist}[language=java]
+struct Source { 
+    int read();
+}
+
+class Impl {
+    int read() {
+        return 0;
+    }
+}
 
 void exhaust(Source s) {
-    while (s.read() >= 0) ;
+    while (s.read() >= 0) {
+    }
 }
+
+void run() {
+    Impl impl = new Impl();
+    exhaust(impl);
+}
+
 \end{pyglist}
 
 Преимущество данного подхода - высокая скорость работы. После генерации класса обёртки, скорость вызова метода протокола сводится к двум выполнениям инструкции invokevirtual, что практически не отличимо от обычного вызова метода.
