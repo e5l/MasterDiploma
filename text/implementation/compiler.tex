@@ -1,0 +1,22 @@
+\subsection{Реализация протоколов в компиляторе Kotlin}
+В данном разделе будет рассказано о деталях реализации протоколов в компиляторе kotlin.
+
+\subsubsection{Синтаксис}
+Для поддержки протоколов в компиляторе был введён новый тип интерфейсов и добавлено ключевое слово protocol.
+
+\begin{pyglist}[language=kotlin]
+protocol interface Proto {
+    fun id(i: Int): Int
+}
+
+class Impl {
+    fun id(i: Int): Int = i
+}
+
+fun foo(arg: Proto) {
+    println(arg.id(42))
+}
+
+foo(Impl())
+\end{pyglist}
+
