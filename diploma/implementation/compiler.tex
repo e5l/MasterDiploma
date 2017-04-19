@@ -5,18 +5,19 @@
 \subsubsection{Синтаксис}
 Для поддержки протоколов в компиляторе был введён новый тип интерфейсов и добавлено ключевое слово protocol.
 
-\begin{minted}[kotlin]
+\begin{minted}{kotlin}
 protocol interface Proto {
-    fun id(i: Int): Int
+  fun id(i: Int): Int
 }
 
 class Impl {
-    fun id(i: Int): Int = i
+  fun id(i: Int): Int = i
 }
 
 fun foo(arg: Proto) {
-    println(arg.id(42))
+  println(arg.id(42))
 }
+
 foo(Impl())
 \end{minted}
 
@@ -38,7 +39,7 @@ foo(Impl())
 \paragraph{Типовые параметры}
 Так как во время выполнения выполняется поиск перегрузок, ограничений на использование типовых параметров нет. Протоколы могут использовать типовые параметры точно так же как и обычные типы. Поддерживаются ковариантные и контрвариантные параметры и отношения на них.
 
-\begin{minted}[kotlin]
+\begin{minted}{kotlin}
 class A<in T>
 class B<out T>
 protocol interface X<T>

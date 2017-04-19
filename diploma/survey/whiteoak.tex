@@ -3,25 +3,25 @@ Whiteoak - это расширение языка Java которое добав
 
 Из такой реализации следует что невозможно создание самостоятельных структурных типов и определение конструкторов, определение статических методов.
 
-\begin{minted}[java]
+\begin{minted}{java}
 struct Source { 
-    int read();
+  int read();
 }
 
 class Impl {
-    int read() {
-        return 0;
-    }
+  int read() {
+    return 0;
+  }
 }
 
 void exhaust(Source s) {
-    while (s.read() >= 0) {
-    }
+  while (s.read() >= 0) {
+  }
 }
 
 void run() {
-    Impl impl = new Impl();
-    exhaust(impl);
+  Impl impl = new Impl();
+  exhaust(impl);
 }
 
 \end{minted}

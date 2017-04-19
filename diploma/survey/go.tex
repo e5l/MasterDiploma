@@ -1,32 +1,32 @@
 \subsubsection{Язык Go}
 Язык Go компилируется в бинарный код. Интерфейсы в Go являются структурными типами\cite{go}.
 
-\begin{minted}[go]
+\begin{minted}{go}
 type geometry interface {
-    area() float64
-    perim() float64
+  area() float64
+  perim() float64
 }
 
 type rect struct {
-    width, height float64
+  width, height float64
 }
 
 func (r rect) area() float64 {
-    return r.width * r.height
+  return r.width * r.height
 }
 func (r rect) perim() float64 {
-    return 2*r.width + 2*r.height
+  return 2*r.width + 2*r.height
 }
 
 func measure(g geometry) {
-    fmt.Println(g)
-    fmt.Println(g.area())
-    fmt.Println(g.perim())
+  fmt.Println(g)
+  fmt.Println(g.area())
+  fmt.Println(g.perim())
 }
 
 func main() {
-    r := rect{width: 3, height: 4}
-    measure(r)
+  r := rect{width: 3, height: 4}
+  measure(r)
 }
 \end{minted}
 
