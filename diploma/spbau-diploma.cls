@@ -298,7 +298,8 @@
 
 %% Полуторный интервал
 \usepackage[nodisplayskipstretch]{setspace}
-\usepackage{verbments}
+\usepackage{minted}
+
 \onehalfspacing
 
 %% Переименование "содержания" в "оглавление"
