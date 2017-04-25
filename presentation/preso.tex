@@ -31,53 +31,60 @@
 \lstset{escapechar=@,style=mycode}
 
 \begin{document}
-\title[Короткое название]{Тут очень длинное что-то написано чтобы умереть еще на главном слайде}
-\subtitle{предварительные результаты}
-\author[Чайников Г.П.]{Чайников Григорий Петрович\\{\footnotesize\textcolor{gray}{научный руководитель: д.ф.-м.н. М.Ф. Редькин}}}
+\title[Структурный типы в языке Kotlin]{Реализация структурных типов в языке Kotlin}
+% \subtitle{предварительные результаты}
+\author[Сташевский Л.Е.]{Сташевский Леонид Евгеньевич\\{\footnotesize\textcolor{gray}{научный руководитель: Д.С. Жарков}}}
 \institute{СПб АУ НОЦНТ РАН}
 \frame{\titlepage}
 
 \begin{frame}\frametitle{Введение}
-\begin{itemize}
-    \item Ехал грека через реку
-    \item Видит грека в реке рак
-    \item Сунул грека руку в реку
-    \item<2-> {\Large \textcolor{blue}{Рак за руку греку цап!}}
-\end{itemize}
+Протокол - структурный тип в языке с номинальной типизацией.
 \end{frame}
 
 \begin{frame}\frametitle{Цель и задачи}
+Цель данной работы реализация протоколов в языке Kotlin
+
+Задачи 
 \begin{itemize}
-    \item Придумать диплом
-    \item Написать диплом
-    \item Убедить всех, что я молодец
-    \item ...
+    \item Изучить существующие подходы реализации протоколов
+    \item Оценить возможности ограничения платформы
+    \item Реализовать поддержку протоколов в компиляторе Kotlin
+    \item Измерить время вызова методов
 \end{itemize}
 \end{frame}
 
+\begin{frame}\frametitle{Подходы к реализации}
+Способы реализации
+\begin{itemize}
+    \item Библиотека рефлексии
+    \item Библиотека вызовов
+    \item Генерация кода для вызова методов
+\end{itemize}
+\end{frame}
 
-\lstset{language=java}
-\begin{frame}[fragile]\frametitle{Алгоритм}
-\begin{lstlisting}
-while (isWater()) {
-  row(boat);
-  if (crayfish) {
-    put(hand, river);
-  }
-}
-\end{lstlisting}
+\begin{frame}\frametitle{Прототип}
+\end{frame}
+
+\begin{frame}\frametitle{Компилятор: возможности}
+\end{frame}
+
+\begin{frame}\frametitle{Компилятор: детали реализации}
+\end{frame}
+
+\begin{frame}\frametitle{Компилятор: возможности}
+\end{frame}
+
+\begin{frame}\frametitle{Компилятор: детали реализации}
+\end{frame}
+
+\begin{frame}\frametitle{Компилятор: измерения}
 \end{frame}
 
 \begin{frame}\frametitle{Результаты}
-\Large
 \begin{itemize}
-    \item Достигли
-    \begin{itemize}
-        \item того
-        \item сего
-    \end{itemize}
-    \item Получили
-    \item Обнаружили
+    \item Реализована поддержка протоколов в языке Kotlin
+    \item Найдены ошибки в реализации протоколов в других языках
+    \item Измерены различные подходы в языке
 \end{itemize}
 \end{frame}
 \end{document}
