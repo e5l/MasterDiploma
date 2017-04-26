@@ -53,6 +53,7 @@
 \end{itemize}
 \end{frame}
 
+
 \begin{frame}\frametitle{Подходы к реализации}
 Способы реализации
 \begin{itemize}
@@ -60,21 +61,64 @@
     \item Библиотека вызовов
     \item Генерация кода для вызова методов
 \end{itemize}
+Рассмотренные реализации
+\begin{itemize}
+    \item Scala
+    \item Whiteoak
+    \item Go
+\end{itemize}
 \end{frame}
+
+\begin{frame}\frametitle{Найденные проблемы}
+\begin{itemize}
+    \item Методы с примитивными типами
+    \item Перегрузки
+    \item Проблема с областью видимости
+    \item Шаблонные типы
+    \item Производтильетность
+\end{itemize}
+Другие подходы к реализации порождают проблему потери идентичности объектов.
+\end{frame}
+
 
 \begin{frame}\frametitle{Прототип}
+Для сравнения производительности реализаций было принято решение написать прототип.
+% таблица с производительностью
+\begin{table}[h]
+\begin{tabular}{|c|c|c|} \hline
+Бенчмарк & Рефлексия (нс) & Invoke(нс) \\ \hline
+Класс & 4.815 $\pm$ 0.072 & 5.002 $\pm$ 0.031 \\ \hline
+Наследник & 4.797 $\pm$ 0.023 & 5.002 $\pm$ 0.037 \\ \hline
+Интерфейс & 4.818 $\pm$ 0.055 & 5.016 $\pm$ 0.104 \\ \hline
+Анонимная функция & 153.892 $\pm$ 0.909 & 5.069 $\pm$ 0.111 \\ \hline
+\end{tabular}
+\end{table}
 \end{frame}
 
-\begin{frame}\frametitle{Компилятор: возможности}
+\lstset{language=kotlin}
+\begin{frame}[fragile]\frametitle{Компилятор: синтаксис}
+\begin{lstlisting}
+protocol interface Foo {
+    fun id(i: Int): String
+}
+
+class X {
+    fun id(i: Int) = i.toString()
+}
+
+...
+
+val y: Foo = X()
+\end{lstlisting}
 \end{frame}
 
 \begin{frame}\frametitle{Компилятор: детали реализации}
+\begin{itemize}
+    \item
+\end{itemize}
 \end{frame}
 
 \begin{frame}\frametitle{Компилятор: возможности}
-\end{frame}
-
-\begin{frame}\frametitle{Компилятор: детали реализации}
 \end{frame}
 
 \begin{frame}\frametitle{Компилятор: измерения}
