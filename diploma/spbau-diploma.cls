@@ -308,4 +308,6 @@
 \let\savenumberline\numberline
 \def\numberline#1{\savenumberline{#1.}}
 \let\hebrewfonttt\ttfamily
-\renewcommand{\theFancyVerbLine}{\sffamily {\small \oldstylenums{\arabic{FancyVerbLine}}}}
+\renewcommand{\theFancyVerbLine}{\arabic{FancyVerbLine}}
+
+\setminted{xleftmargin=\parindent}
