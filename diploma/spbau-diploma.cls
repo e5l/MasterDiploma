@@ -311,3 +311,4 @@
 \renewcommand{\theFancyVerbLine}{\arabic{FancyVerbLine}}
 
 \setminted{xleftmargin=\parindent,frame=lines,framesep=2mm,baselinestretch=1.2,linenos}
+\usepackage{pgfplots}
