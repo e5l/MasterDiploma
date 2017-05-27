@@ -1,5 +1,4 @@
 #!/bin/bash
-
 xelatex -interaction=nonstopmode -shell-escape main
 bibtex main
 xelatex -interaction=nonstopmode -shell-escape main

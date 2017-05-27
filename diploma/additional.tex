@@ -1,0 +1,136 @@
+\vfill
+\clearpage
+\appendix
+
+
+\stepcounter{section}
+    \hfill ПРИЛОЖЕНИЕ \arabic{section} \label{perfasm:listing1}
+    \begin{center}
+        \bf{Листинг \tool{perfasm} для вызова метода в прототипе}
+    \end{center}
+    \markboth{\MakeUppercase{}}{}
+    \addcontentsline{toc}{section}{Приложение \arabic{section}. Листинг \tool{perfasm} для вызова метода в прототипе}
+
+\begin{verbatim}
+Hottest code regions (>10.00% "cycles" events):
+[Hottest Region 1]......................C2, level 4
+ProtocolsBenchmark_reflectInterfaceLambda_jmhTest
+
+and    $0xfff,%ebx
+cmp    $0xff0,%ebx
+jbe    0x00007fe97d20dfee
+sub    $0x10,%rsp
+mov    %edx,%eax
+movzwl -0x2(%rdi,%rax,2),%ebx
+mov    %bx,-0x2(%rsp,%rax,2)
+dec    %rax
+jne    0x00007fe97d20dfdc
+mov    %rsp,%rdi
+mov    $0x1,%eax
+push   %rcx
+mov    %rdi,%rbx
+vpcmpestri $0xd,(%rbx),%xmm2
+jb     0x00007fe97d20e01d
+sub    $0x8,%edx
+jle    0x00007fe97d20e023
+cmp    %eax,%edx
+js     0x00007fe97d20e023
+add    $0x10,%rbx
+cmp    $0x8,%edx
+jge    0x00007fe97d20dff7
+lea    -0x10(%rbx,%rdx,2),%rbx
+mov    $0x8,%edx
+jmp    0x00007fe97d20dff7
+sub    %ecx,%edx
+cmp    %eax,%edx
+jge    0x00007fe97d20e02a
+mov    $0xffffffff,%ebx
+jmp    0x00007fe97d20e039
+lea    (%rbx,%rcx,2),%rbx
+cmp    $0x7,%ecx
+jg     0x00007fe97d20e00c
+sub    %rdi,%rbx
+shr    $0x1,%ebx
+pop    %rsp
+mov    %r10,%rdi
+mov    %r11d,%r10d
+mov    %r9,%rcx
+vmovq  %xmm0,%r11
+vmovq  %xmm1,%r9
+cmp    $0xffffffffffffffff,%ebx
+jle    0x00007fe97d20e4c9
+mov    %r14,0x70(%rsp)
+mov    %rdi,0x60(%rsp)
+mov    %r13,(%rsp)
+mov    %rcx,%rdx
+mov    %r11,%rcx
+mov    %rbp,%rsi
+shl    $0x3,%rsi
+mov    $0x718fac3b0,%rbp
+callq  0x00007fe97d046160
+mov    0x60(%rsp),%rdi
+movzbl 0x94(%rdi),%r11d
+mov    (%rsp),%r13
+add    $0x1,%r13
+mov    $0x718fac3b0,%r10
+test   %eax,0x16f45f5b(%rip)
+test   %r11d,%r11d
+jne    0x00007fe97d20e360
+mov    0x70(%rsp),%r14
+mov    0x18(%r14),%r10d
+mov    0x8(%r12,%r10,8),%r11d
+mov    $0x71a3f8478,%r8
+mov    0x18(%r8),%r8d
+shl    $0x3,%r11
+mov    0x68(%r11),%r11
+test   %r8d,%r8d
+je     0x00007fe97d20e451
+mov    %r8,%r9
+shl    $0x3,%r9
+cmp    %r11,%r9
+jne    0x00007fe97d20e48d
+mov    0x60(%r15),%rax
+mov    $0x71a3f8478,%r11
+mov    0x20(%r11),%r11d
+mov    %r11d,0xc(%rsp)
+mov    %rax,%r11
+add    $0x10,%r11
+lea    (%r12,%r10,8),%rcx
+cmp    0x70(%r15),%r11
+jae    0x00007fe97d20e29a
+mov    %r11,0x60(%r15)
+prefetchw 0xc0(%r11)
+movq   $0x1,(%rax)
+prefetchw 0x100(%r11)
+movl   $0xf8002213,0x8(%rax)
+prefetchw 0x140(%r11)
+mov    %r12d,0xc(%rax)
+prefetchw 0x180(%r11)
+mov    %rax,%r11
+mov    0xc(%rsp),%ebp
+test   %r8d,%r8d
+je     0x00007fe97d20e2ed
+mov    0xc(%rsp),%ebp
+mov    0x50(%r12,%rbp,8),%r8d
+cmp    $0xf80088c5,%r9d
+jne    0x00007fe97d20e3e6
+shl    $0x3,%r8
+mov    0xc(%r8),%ebx
+cmp    $0xf8008883,%r9d
+jne    0x00007fe97d20e41d
+mov    $0x718f869a0,%r8
+mov    0x74(%r8),%r8d
+lea    (%r12,%rbx,8),%r9
+mov    0xc(%r9),%ebx
+mov    0x10(%r9),%ebp
+inc    %ebx
+mov    %ebx,0xc(%r9)
+cmp    %r8d,%ebx
+jle    0x00007fe97d20e281
+mov    0x28(%r12,%rbp,8),%r8d
+mov    %r8d,0xc(%rsp)
+mov    0x14(%r12,%r8,8),%r8d
+test   %r8d,%r8d
+jne    0x00007fe97d20df80
+
+\end{verbatim}
