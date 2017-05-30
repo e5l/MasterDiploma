@@ -2,9 +2,98 @@
 \clearpage
 \appendix
 
+\stepcounter{section}
+    \hfill ПРИЛОЖЕНИЕ \arabic{section}
+    \begin{center}
+        \bf{Зависимость времени вызова от числа аргументов}
+    \end{center}
+    \markboth{\MakeUppercase{}}{}
+    \addcontentsline{toc}{section}{Приложение \arabic{section}. Зависимость времени вызова от числа аргументов}
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|c|c|c|c|} \hline
+Количество аргументов & Рефлексия(нс) &  Вызовы(нс) & Фактор \\ \hline
+0 & 12.027 $\pm$ 0.058 & 11.32 $\pm$ 0.091 & 1.062 \\ \hline
+1 & 14.494 $\pm$ 0.036 & 11.617 $\pm$ 0.548 & 1.247 \\ \hline
+2 & 16.31 $\pm$ 0.048 & 11.582 $\pm$ 0.002 & 1.408 \\ \hline
+3 & 17.948 $\pm$ 0.289 & 11.674 $\pm$ 0.009 & 1.537 \\ \hline
+4 & 27.699 $\pm$ 0.079 & 12.2 $\pm$ 1.137 & 2.270 \\ \hline
+5 & 31.318 $\pm$ 0.09 & 12.414 $\pm$ 0.001 & 2.522 \\ \hline
+10 & 53.635 $\pm$ 0.148 & 14.805 $\pm$ 0.964 & 3.622 \\ \hline
+15 & 79.463 $\pm$ 0.314 & 15.078 $\pm$ 0.876 & 5.270 \\ \hline
+20 & 124.527 $\pm$ 0.334 & 15.695 $\pm$ 0.006 & 7.934 \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\newpage
 
 \stepcounter{section}
-    \hfill ПРИЛОЖЕНИЕ \arabic{section} \label{perfasm:listing1}
+    \hfill ПРИЛОЖЕНИЕ \arabic{section}
+    \begin{center}
+        \bf{Зависимость времени вызова от размера кеша и числа целевых объектов в месте вызова}
+    \end{center}
+    \markboth{\MakeUppercase{}}{}
+    \addcontentsline{toc}{section}{Зависимость времени вызова от размера кеша и числа целевых объектов в месте вызова(мс)}
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|} \hline
+\diagbox{типы}{кеш} & 1 & 5 & 10 & 15 & 20 \\ \hline
+1 & 1.095 & 0.983 & 0.991 & 0.967 & 0.990 \\ \hline
+2 & 35.543 & 1.981 & 1.780 & 2.022 & 1.683 \\ \hline
+3 & 45.198 & 2.364 & 2.387 & 2.538 & 2.365 \\ \hline
+4 & 52.456 & 2.600 & 2.797 & 3.038 & 2.740 \\ \hline
+5 & 53.517 & 2.694 & 2.885 & 2.723 & 2.808 \\ \hline
+6 & 54.901 & 15.144 & 2.930 & 3.387 & 3.286 \\ \hline
+7 & 58.633 & 21.945 & 3.016 & 3.512 & 3.672 \\ \hline
+8 & 61.292 & 27.759 & 3.112 & 3.203 & 3.368 \\ \hline
+9 & 60.865 & 32.528 & 3.403 & 3.959 & 3.895 \\ \hline
+10 & 59.764 & 37.353 & 3.439 & 3.982 & 3.935 \\ \hline
+11 & 63.958 & 38.532 & 11.270 & 3.665 & 4.446 \\ \hline
+12 & 62.544 & 40.988 & 17.156 & 4.115 & 4.320 \\ \hline
+13 & 62.372 & 42.641 & 20.799 & 3.791 & 4.149 \\ \hline
+14 & 63.379 & 45.066 & 24.085 & 4.251 & 4.551 \\ \hline
+15 & 63.887 & 45.461 & 28.482 & 4.070 & 4.714 \\ \hline
+16 & 65.248 & 48.146 & 29.352 & 9.962 & 4.565 \\ \hline
+17 & 66.125 & 48.228 & 32.565 & 14.179 & 4.769 \\ \hline
+18 & 64.699 & 50.720 & 36.928 & 17.160 & 4.763 \\ \hline
+19 & 65.183 & 49.968 & 37.031 & 20.195 & 4.847 \\ \hline
+20 & 68.051 & 51.031 & 38.352 & 22.822 & 5.004 \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\newpage
+
+\stepcounter{section}
+    \hfill ПРИЛОЖЕНИЕ \arabic{section}
+    \begin{center}
+        \bf{Сравнение времени работы протоколов в \tool{JVM} языках}
+    \end{center}
+    \markboth{\MakeUppercase{}}{}
+    \addcontentsline{toc}{section}{Приложение \arabic{section}. Сравнение времени работы протоколов в \tool{JVM} языках}
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|c|c|c|c|} \hline
+Размер массива & Scala &  Kotlin & Фактор \\ \hline
+10 & 0.516 $\pm$ 0.009 & 0.599 $\pm$ 0.002 & 0.861 \\ \hline
+50 & 3.819 $\pm$ 0.018 & 4.612 $\pm$ 0.059 & 0.828 \\ \hline
+100 & 9.492 $\pm$ 0.307 & 9.868 $\pm$ 0.044 & 0.961 \\ \hline
+500 & 57.09 $\pm$ 0.211 & 61.271 $\pm$ 0.944 & 0.931 \\ \hline
+1000 & 130.902 $\pm$ 6.631 & 127.616 $\pm$ 1.463 & 1.025 \\ \hline
+5000 & 769.18 $\pm$ 2.255 & 738.57 $\pm$ 11.148 & 1.041 \\ \hline
+10000 & 1700.018 $\pm$ 66.679 & 1497.701 $\pm$ 19.117 & 1.135 \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\newpage
+
+\stepcounter{section}
+    \hfill ПРИЛОЖЕНИЕ \arabic{section}
     \begin{center}
         \bf{Листинг \tool{perfasm} для вызова метода в прототипе}
     \end{center}
